@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root {
+  --primary: #efb6b2;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  color: var(--secondary);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.main-header {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.main-header .logo {
+  color: var(--primary);
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.main-header .title {
+  margin: 2rem 0 1rem;
+}
+
+/* Upload form */
+.upload-form {
+  text-align: center;
+}
+
+.upload-form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.upload-form label:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.upload-form label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.upload-form .output {
+  margin-bottom: 2rem;
+}
+
+.upload-form .output .error {
+  color: var(--error);
+  font-size: 14px;
+}
+
+.upload-form .output .progress-bar {
+  height: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: var(--primary);
+}
+
+/* Image grid */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.img-grid .img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.img-grid .img-container .icon-delete {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  visibility: hidden;
+}
+
+.img-grid img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.img-grid .img-container:hover .icon-delete {
+  visibility: visible;
+}
